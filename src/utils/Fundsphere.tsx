@@ -1,63 +1,101 @@
-import React from 'react';
 import '../index.css'
-import '../utils/fundsphere.png';
+import '../global.css'
 
 function Fundsphere() {
-    return(
+    return (
         <>
-        <link rel="icon" href="" />
-           {/* Fundsphere Subheading Navbar Menus*/}
-           <header>
-               <img src="../utils/fundsphere.png" alt="logo" />
-               <a href="#" className="logo">Fundsphere</a>
-
-               <div id="menu" className="fas fa-bars"></div>
-               <nav className="navbar">
-                  <ul>
-                    <li className="dropdown">
-                        <a href="#" className="dropbtn">Features ▼</a>
-                        <ul className="dropdown-content">
-                            <li><a href="#">Landing Page V1</a></li>
-                            <li><a href="#">Landing Page V2</a></li>
-                            <li><a href="#">Landing Page V3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Sign in</a></li>
-                    <button><a href="#">Free Trial</a></button>
-                  </ul>
-               </nav>
-           </header>
-           {/* Enders of sub heading */}
-
-           {/* Section of Developments */}
-            <section className="home" id="home">
-                <div className="container-primary">
-
-                    <div className="content"></div>
-
-                    <div className="subheading">
-                        <div className="heading-upper-content">BEST CHOICE</div>
-                        <div className="primary-header">
-                            <h1>Feature strategic finance for <text>Enterpreneurs</text></h1>
-                        </div>
-                        <div className="description">
-                            <p>
-                                Scale with checking and savings accounts,
-                                custom tools, and access to our investor network. 
-                            </p>
+            
+            {/* Fundsphere Subheading Navbar Menus */}
+            <header>
+                <nav>
+                    <div className="container-a">
+                        <div className="wrapper">
+                            <div className="block">
+                                <img src="./utils/Logo.svg" alt="logo" />
+                                <div className="menu">
+                                    <ul>
+                                        <li>Features</li>
+                                        <li>Pricing</li>
+                                        <li>About Us</li>
+                                        <li>Blog</li>
+                                    </ul>
+                                </div>
+                                <div className="button-wrapper">
+                                    <button className="btn-transparent">Sign In</button>
+                                    <button className="btn-primary">Free Trial</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </nav>
+            </header>
+            {/* Enders of sub heading */}
 
-                    <div className='container-feed'>
-                        <input type="email" placeholder='Your work email'/>
-                        <button type='button'>Get Started</button>
+            {/* Section of Developments */}
+            <section className="hero" id="home">
+                <div className="container">
+                    <div className="hero-home-container">
+                        <div className="hero-home">
+                            <img src="" alt="" />
+                            <img src="" alt="" />
+                            <div className="image-wrapper-v2">
+                                <img src="" alt="" />
+                                <img src="" alt="" />
+                            </div>
+                        </div>
+                        <div className="hero-home-content">
+                            <div className="hero-heading">
+                                <div className="label-badge">
+                                    FEATURES
+                                    <h1>Future strategic finance for <text>Enterprenurs</text></h1>
+                                    <p>Scale with checking and savings accounts, custom tools, and access to our investor network.</p>
+                                </div>
+                            </div>
+                            <form action="input">
+                                <div className="cta-btn-wrapper">
+                                    <button type="submit">Get Started</button>
+                                    <input type="Your work email" />
+                                </div>
+                            </form>
+                            <div className="overview-content">
+                                <div className="overview-item">
+                                    <text>10%</text>
+                                    <p>Benefical Cashback</p>
+                                </div>
+                                <div className="overview-item">
+                                    <text>7M</text>
+                                    <p>Satisfied Customer</p>
+                                </div>
+                                <div className="overview-item">
+                                    <text>40+</text>
+                                    <p>Country Available</p>
+                                </div>
+                            </div>
+                            <img src="" alt="" />
+                            <img src="" alt="" />
+                        </div>
                     </div>
                 </div>
             </section>
-           {/* Section Developments ending */}
+            {/* Section Developments ending */}
+
+            {/* section overview */}
+            <section>
+                <div className="container-b">
+                    <div className="overview-content">
+                        <div className="company-logo">
+                            <img src="#" alt="uber-logo" />
+                            <img src="#" alt="amazon-logo" />
+                            <img src="#" alt="ebay-logo" />
+                            <img src="#" alt="walmart-logo" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* section overview end*/}
+
+            {/* section features */}
+
         </>
     )
 }
