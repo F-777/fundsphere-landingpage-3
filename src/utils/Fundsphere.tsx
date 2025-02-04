@@ -1,11 +1,45 @@
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../index.css'
 import '../global.css'
+import '../assets/amazon.svg'
+import '../assets/ebay.svg'
+import '../assets/uber.svg'
+import '../assets/walmart.svg'
+import '../utils/Logo.svg'
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Fundsphere() {
-    return (
+    useEffect(() => {
+        const sections = document.querySelectorAll(".slide-in");
+
+        sections.forEach((section) => {
+            const direction = section.classList.contains("left") ? -100 : 100;
+
+            gsap.fromTo(
+                section,
+                { x: direction, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%", // Mulai animasi saat 80% viewport
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
+        });
+    }, []);
+ return (
         <>
-            
-            {/* Fundsphere Subheading Navbar Menus */}
+            {/* Fundsphere Subheading Navbar Menus*/}
             <header>
                 <nav>
                     <div className="container-a">
@@ -29,7 +63,6 @@ function Fundsphere() {
                     </div>
                 </nav>
             </header>
-            {/* Enders of sub heading */}
 
             {/* Section of Developments */}
             <section className="hero" id="home">
@@ -46,7 +79,7 @@ function Fundsphere() {
                         <div className="hero-home-content">
                             <div className="hero-heading">
                                 <div className="label-badge">
-                                    FEATURES
+                                    BEST CHOICE
                                     <h1>Future strategic finance for <text>Enterprenurs</text></h1>
                                     <p>Scale with checking and savings accounts, custom tools, and access to our investor network.</p>
                                 </div>
@@ -87,15 +120,27 @@ function Fundsphere() {
                             <img src="#" alt="uber-logo" />
                             <img src="#" alt="amazon-logo" />
                             <img src="#" alt="ebay-logo" />
-                            <img src="#" alt="walmart-logo" />
+                            <img src="#" alt="walma" />
                         </div>
                     </div>
                 </div>
             </section>
-            {/* section overview end*/}
 
             {/* section features */}
 
+            <section>
+                <div className="container-c">
+                    <div className="subsecsection-heading">
+                        <div className="label-badge">
+                            <text>FEATURES</text>
+                        </div>
+                    </div>
+                    <div className="features-content">
+                        <button className="btn-primary">See More Features</button>
+                    </div>
+                </div>
+            </section>
+            
         </>
     )
 }
