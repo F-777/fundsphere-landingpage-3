@@ -1,15 +1,18 @@
 import { useEffect } from "react";
+import { ReactDOM } from "react";
+import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../index.css'
 import '../global.css'
-import '../assets/amazon.svg'
-import '../assets/ebay.svg'
-import '../assets/uber.svg'
-import '../assets/walmart.svg'
-import '../utils/Logo.svg'
-
-
+import Amazon from '../assets/amazon.svg';
+import Ebay from '../assets/ebay.svg';
+import Uber from '../assets/uber.svg';
+import Walmart from'../assets/walmart.svg';
+import Logo from '../utils/Logo.svg';
+import MoneyCharger from '../assets/moneycharger.svg'; 
+import ConstRedution from '../assets/constredution.svg';
+import MaskGroup from '../assets/Mask group.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,15 +40,15 @@ function Fundsphere() {
             );
         });
     }, []);
- return (
+    return (
         <>
-            {/* Fundsphere Subheading Navbar Menus*/}
+         {/* Fundsphere Subheading Navbar Menus*/}
             <header>
                 <nav>
-                    <div className="container-a">
-                        <div className="wrapper">
+                    <div className="container-navbar">
+                        <div className="nav-wrapper">
                             <div className="block">
-                                <img src="./utils/Logo.svg" alt="logo" />
+                                <img src={Logo} alt="logo" />
                                 <div className="menu">
                                     <ul>
                                         <li>Features</li>
@@ -69,10 +72,10 @@ function Fundsphere() {
                 <div className="container">
                     <div className="hero-home-container">
                         <div className="hero-home">
-                            <img src="" alt="" />
-                            <img src="" alt="" />
+                            <img src={MoneyCharger} alt="money-charger" />
+                            <img src={ConstRedution} alt="const-redution" />
                             <div className="image-wrapper-v2">
-                                <img src="" alt="" />
+                                <img src={MaskGroup} alt="mask-group" />
                                 <img src="" alt="" />
                             </div>
                         </div>
@@ -110,17 +113,17 @@ function Fundsphere() {
                     </div>
                 </div>
             </section>
-            {/* Section Developments ending */}
+            
 
             {/* section overview */}
             <section>
-                <div className="container-b">
+                <div className="container-overview">
                     <div className="overview-content">
                         <div className="company-logo">
-                            <img src="#" alt="uber-logo" />
-                            <img src="#" alt="amazon-logo" />
-                            <img src="#" alt="ebay-logo" />
-                            <img src="#" alt="walma" />
+                            <img src={Uber} alt="uber-logo" />
+                            <img src={Amazon} alt="amazon-logo" />
+                            <img src={Ebay} alt="ebay-logo" />
+                            <img src={Walmart} alt="walmart" />
                         </div>
                     </div>
                 </div>
@@ -129,7 +132,7 @@ function Fundsphere() {
             {/* section features */}
 
             <section>
-                <div className="container-c">
+                <div className="container-features">
                     <div className="subsecsection-heading">
                         <div className="label-badge">
                             <text>FEATURES</text>
@@ -140,7 +143,7 @@ function Fundsphere() {
                     </div>
                 </div>
             </section>
-            
+
         </>
     )
 }
